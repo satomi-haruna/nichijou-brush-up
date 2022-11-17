@@ -130,7 +130,6 @@ GEM
     momentjs-rails (2.29.4.1)
       railties (>= 3.1)
     msgpack (1.6.0)
-    mysql2 (0.5.4)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
@@ -267,7 +266,6 @@ DEPENDENCIES
   jquery-rails (= 4.3.3)
   listen (~> 3.3)
   momentjs-rails
-  mysql2
   net-imap
   net-pop
   net-smtp
