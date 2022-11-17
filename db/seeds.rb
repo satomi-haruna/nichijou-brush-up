@@ -128,6 +128,7 @@ users.each do |user|
   end
 end
 
+# brush up で利用していきましょう
 # # スケジュールのテストデータ
 # events = [
 #   {
