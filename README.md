@@ -1,4 +1,4 @@
-# 日常のスケジュール日誌
+# ほのぼのスケジュール日誌
 
 ## サイト概要
 ### サイトテーマ
@@ -29,9 +29,16 @@
 
 ## 設計書
 - ER図
-- ワイヤーフレーム　https://app.diagrams.net/#G1Jb7eFonuiUNE4jVMJoox7RcrjzTFdz3-
-- 画面遷移図　https://app.diagrams.net/#G1k-EIhKFxDzvJQGhdjpC8bHtpUJWcX9mT
-- テーブル定義書　https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=291359249
+  https://drive.google.com/file/d/18GFXXKxlelouKJiDEG9JmaBGJ6mOCVSF/view
+- ワイヤーフレーム
+  https://app.diagrams.net/#G19r_Dy4rtLzIftIkCBJwh4F4K4VxPGP5N
+- 画面遷移図<br>
+  会員側　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view<br>
+  管理者側　https://drive.google.com/file/d/1gAQiiGbJD5lofM3D6ho5hmfyFnuAEx7B/view
+- テーブル定義書
+  https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
+- アプリケーション詳細設計
+  https://docs.google.com/spreadsheets/d/1gs81HPOOvc16TodJFdTRwZ_eM7mb8vUsQCp4urGtTkw/edit#gid=0
 
 ## 開発環境
 - OS：Linux(CentOS)
@@ -41,5 +48,14 @@
 - IDE：Cloud9
 
 ## 使用素材
-<!--- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。-->
-<!--- 使用しない場合は、使用素材の項目をREADMEから削除してください。-->
+- https://www.photo-ac.com/main/terms/
+- https://nukumori-icon.com/tag/%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/
+- https://hiyokoyarou.com/about/
+- https://illustimage.com/help.php
+- https://illust-ryokka.jp/about/rule/
+- https://www.illust-pocket.com/
+- http://free-line-design.com/?page_id=17
+- https://icooon-mono.com/
+- https://www.irasutoya.com/p/faq.html
+- https://www.canva.com/ja_jp/create/logos/
+- https://www.pakutaso.com/userpolicy.html
