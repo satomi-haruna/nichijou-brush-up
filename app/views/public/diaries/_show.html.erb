@@ -30,7 +30,6 @@
         <div class="col-1"></div>
         <div class="col-8 detail">
           <%= diary.detail %>
-          <!--%= diary.image_id %>-->
         </div>
         <div class="col-3">
           <!--AI機能 感情分析-->
@@ -55,6 +54,17 @@
                 <span class="mental-score">気分の点数<%= diary.score.to_f %></span>
               </span>
             </p>
+          <% end %>
+        </div>
+      </div>
+      <!--画像の表示-->
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8 memory-image">
+          <% if diary.image_id.attached? %>
+            <%= image_tag diary.image_id, width: "50%" %>
+          <% else %>
+            <%= image_tag 'yostuba', width: "50%" %>
           <% end %>
         </div>
           <%= image_tag "eda1.png", class:"line2" %>

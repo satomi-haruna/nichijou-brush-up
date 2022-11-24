@@ -20,8 +20,8 @@
         <%= f.text_field :simple_diary, placeholder: "ひとこと日記", class: "diary-width" %><br>
         <%= f.text_area :detail, class: "diary-width diary-detail" %><br>
         <div class="imgae-field">
-          <h4>写真の投稿</h4>
-          <%= f.file_field :image, accept: "image/*" %>
+          <p>写真を追加する</p>
+          <%= f.file_field :image_id, accept: "image/*" %>
         </div>
         <button type="submit", class="diary-btn float-right btn btn-success", align="right">
           保存 <i class="fas fa-sd-card"></i>

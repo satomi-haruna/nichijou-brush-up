@@ -1,6 +1,6 @@
 class Diary < ApplicationRecord
   belongs_to :event
-  has_one_attached :image
+  has_one_attached :image_id
 
   # 日記入力項目のバリデーション
   validates :event_id, presence: true
