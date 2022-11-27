@@ -9,6 +9,8 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--検証ツールconsoleのエラー対策 スーパーリロードが実行されるようにする-->
+    <meta name="turbolinks-visit-control" content="reload">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 

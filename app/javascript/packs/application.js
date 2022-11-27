@@ -25,7 +25,10 @@ import interactionPlugin from '@fullcalendar/interaction';
 
 document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
-
+  // すべてのページでcalendarのjavascriptを読み込んでしまうため、読み込むidがなければ処理を終了するようif文の追加
+  if(!calendarEl){
+    return
+  }
   var calendar = new Calendar(calendarEl, {
     plugins: [ dayGridPlugin, interactionPlugin ],
     events: '/events.json',
