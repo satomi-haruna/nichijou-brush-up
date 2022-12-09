@@ -1,5 +1,6 @@
 class Public::EventsController < ApplicationController
   before_action :authenticate_user!
+  before_action :edit_current_user!, except: [:top]
 
   def new
     @event = Event.new
@@ -47,6 +48,14 @@ class Public::EventsController < ApplicationController
     # fullcalendar表示には変数eventである必要がある
     # ログインユーザーの登録情報を一覧表示
     @events = current_user.events
+
+    # 検索結果
+    # カラータグ　whereで限定して表示する
+    # 部分テンプレート・Javascriptで
+    # @events = current_user.events.where(color_id: red)
+    # @events = current_user.events.where(color_id: params[:color_id])
+    # seachフォームを作成→　color_id　で絞り込み　↑で制限
+
   end
 
   # 退会チェックする
@@ -58,6 +67,10 @@ class Public::EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:user_id, :plan, :plan_datetime, :allday_flg, :memo, :place, :color_id, :is_active)
+  end
+
+  def edit_current_user
+
   end
 
 end
