@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   scope module: :public do
+    get 'search_events' => 'search#search_events'
     resources :events do
       resources :diaries, except: [:index]
     end
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
     get 'users/information/edit' => 'users#edit'
     patch 'users/information' => 'users#update'
     # 退会確認画面
-    get '/users/unsubscribe' => 'users#unsubscribe'
+    get 'users/unsubscribe' => 'users#unsubscribe'
     # user論理削除
     patch 'users/withdraw' => 'users#withdraw'
   end

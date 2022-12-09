@@ -1,6 +1,6 @@
 class Public::EventsController < ApplicationController
   before_action :authenticate_user!
-  before_action :edit_current_user!, except: [:top]
+  # before_action :edit_current_user!, except: [:top]
 
   def new
     @event = Event.new
@@ -47,15 +47,15 @@ class Public::EventsController < ApplicationController
   def index
     # fullcalendar表示には変数eventである必要がある
     # ログインユーザーの登録情報を一覧表示
-    @events = current_user.events
-
-    # 検索結果
-    # カラータグ　whereで限定して表示する
-    # 部分テンプレート・Javascriptで
-    # @events = current_user.events.where(color_id: red)
-    # @events = current_user.events.where(color_id: params[:color_id])
-    # seachフォームを作成→　color_id　で絞り込み　↑で制限
-
+    # searchなどでwhereの結果を取ってきているが、サイドJavaScriptが読み込まれているため、全て表示にもどってしまう...？
+    # event/indexで直接カラーIDを指定すれば、そのIDのみ表示することは可能
+    # event/indexにてカラーIDが存在すれば、検索したものを、存在しなければ全表示、としたかったけど、上手くいかず...
+    # どう転んでも全表示になってしまう状態で
+    if current_user.events.where(color_id: params[:color_id]).present?
+      @events = current_user.events.where(color_id: params[:color_id])
+    else
+      @events = current_user.events
+    end
   end
 
   # 退会チェックする
@@ -69,8 +69,7 @@ class Public::EventsController < ApplicationController
     params.require(:event).permit(:user_id, :plan, :plan_datetime, :allday_flg, :memo, :place, :color_id, :is_active)
   end
 
-  def edit_current_user
-
-  end
+  # def edit_current_user
+  # end
 
 end

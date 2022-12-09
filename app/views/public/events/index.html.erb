@@ -1,3 +1,40 @@
+<div class=seach>
+  <%= form_with url: events_path, method: :get do |f| %>
+  <div class="btn-group btn-group-toggle">
+    <label class="maru" id="colorless">
+      <%= f.radio_button :color_id, :colorless %>
+    </label>
+    <label class="maru" id="pink">
+      <%= f.radio_button :color_id, :pink %>
+    </label>
+    <label class="maru" id="red">
+      <%= f.radio_button :color_id, :red %>
+    </label>
+    <label class="maru" id="orange">
+      <%= f.radio_button :color_id, :orange %>
+    </label>
+    <label class="maru" id="yellow">
+      <%= f.radio_button :color_id, :yellow %>
+    </label>
+    <label class="maru" id="yellow_green">
+      <%= f.radio_button :color_id, :yellow_green %>
+    </label>
+    <label class="maru" id="green">
+      <%= f.radio_button :color_id, :green %>
+    </label>
+    <label class="maru" id="light_blue">
+      <%= f.radio_button :color_id, :light_blue %>
+    </label>
+    <label class="maru" id="blue">
+      <%= f.radio_button :color_id, :blue %>
+    </label>
+    <label class="maru" id="purple">
+      <%= f.radio_button :color_id, :purple %>
+    </label>
+  </div>
+  <%= f.submit 'GO', class: "btn btn-success" %>
+  <% end %>
+</div>
 <div class="event">
   <!--カレンダー表示-->
   <div id='calendar'></div>
